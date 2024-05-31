@@ -28,6 +28,7 @@ export function Navbar() {
             <MountainIcon className="h-6 w-6" />
             <span className="sr-only">Acme Inc</span>
           </Link>
+          {/* Mobile */}
           <div className="grid gap-2 py-6">
             <Link
               className="flex w-full items-center py-2 text-lg font-semibold"
@@ -59,7 +60,7 @@ export function Navbar() {
           </div>
         </SheetContent>
       </Sheet>
-      <Link className="mr-6 hidden lg:flex" href="#">
+      <Link className="mr-6 hidden lg:flex" href="/">
         <MountainIcon className="h-6 w-6" />
         <span className="sr-only">Acme Inc</span>
       </Link>
@@ -122,13 +123,11 @@ function MenuIcon(props) {
 
 function MountainIcon(props) {
   return (
-    <Link href="/">
-      <div className="flex items-center">
-        <Image src={logo} alt="company logo" width={60} height={60} />
-        <h2 className={`${cormorantGaramond.className} text-2xl`}>
-          last24hr.com
-        </h2>
-      </div>
-    </Link>
+    <div className="flex items-center">
+      <Image src={logo} alt="company logo" width={60} height={60} />
+      <h2 className={`${cormorantGaramond.className} text-2xl`}>
+        last24hr.com
+      </h2>
+    </div>
   );
 }
