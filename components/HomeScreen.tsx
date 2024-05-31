@@ -51,7 +51,12 @@ export default function HomeScreen() {
               of quantum computers,
             </DialogDescription>
             <Button>Read More</Button>
-            <p className="text-gray-500 text-right">Source: News 18</p>
+            <div className="flex justify-between">
+              <p className="text-gray-500">
+                Thursday, May 30th, 2024 at 08:33 AM
+              </p>
+              <p className="text-gray-500">Source: News 18</p>
+            </div>
           </DialogHeader>
         </DialogContent>
       </Dialog>
