@@ -11,6 +11,13 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function HomeScreen() {
   return (
@@ -24,41 +31,114 @@ export default function HomeScreen() {
       <p className="text-2xl sm:text-3xl md:text-4xl sm:px-4 text-slate-500 text-center">
         {`"Read the Headlines, Explore the Full Story"`}
       </p>
+
       <Dialog>
         <DialogTrigger asChild>
           <Button className="h-12 px-5 my-2 text-base">
             Start Exploring&nbsp;&nbsp;&nbsp;&nbsp;&#10140;
           </Button>
         </DialogTrigger>
-        <DialogContent className="p-8 md:max-w-2xl gap-6">
-          <Image
-            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="news-image"
-            width={600}
-            height={400}
-            className="rounded-md"
-          />
-          <DialogHeader className="gap-4">
-            <DialogTitle className="text-3xl">
-              Breakthrough in Quantum Computing: Scientists Achieve Stable Qubit
-              State at Room Temperature
-            </DialogTitle>
-            <DialogDescription className="text-xl">
-              In a monumental advancement for quantum computing, researchers at
-              the Quantum Computing Institute have successfully maintained a
-              stable qubit state at room temperature. This breakthrough could
-              significantly accelerate the development and practical application
-              of quantum computers,
-            </DialogDescription>
-            <Button>Read More</Button>
-            <div className="flex justify-between">
-              <p className="text-gray-500">
-                Thursday, May 30th, 2024 at 08:33 AM
-              </p>
-              <p className="text-gray-500">Source: News 18</p>
-            </div>
-          </DialogHeader>
-        </DialogContent>
+        <Carousel>
+          <DialogContent className="p-8 md:max-w-2xl gap-6">
+            <CarouselContent>
+              <CarouselItem>
+                <div className="flex flex-col items-center gap-6">
+                  <Image
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="news-image"
+                    width={600}
+                    height={400}
+                    className="rounded-md"
+                  />
+                  <DialogHeader className="gap-4 text-center">
+                    <DialogTitle className="text-3xl">
+                      Breakthrough in Quantum Computing: Scientists Achieve
+                      Stable Qubit State at Room Temperature
+                    </DialogTitle>
+                    <DialogDescription className="text-xl">
+                      In a monumental advancement for quantum computing,
+                      researchers at the Quantum Computing Institute have
+                      successfully maintained a stable qubit state at room
+                      temperature. This breakthrough could significantly
+                      accelerate the development and practical application of
+                      quantum computers,
+                    </DialogDescription>
+                    <Button>Read More</Button>
+                    <div className="flex justify-between w-full">
+                      <p className="text-gray-500">Thursday, May 30th, 2024</p>
+                      <p className="text-gray-500">Source: News 18</p>
+                    </div>
+                  </DialogHeader>
+                </div>
+              </CarouselItem>
+              {/* Add more CarouselItem components here for additional slides */}
+              <CarouselItem>
+                <div className="flex flex-col items-center gap-6">
+                  <Image
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="news-image"
+                    width={600}
+                    height={400}
+                    className="rounded-md"
+                  />
+                  <DialogHeader className="gap-4 text-center">
+                    <DialogTitle className="text-3xl">
+                      Breakthrough in Quantum Computing: Scientists Achieve
+                      Stable Qubit State at Room Temperature
+                    </DialogTitle>
+                    <DialogDescription className="text-xl">
+                      In a monumental advancement for quantum computing,
+                      researchers at the Quantum Computing Institute have
+                      successfully maintained a stable qubit state at room
+                      temperature. This breakthrough could significantly
+                      accelerate the development and practical application of
+                      quantum computers,
+                    </DialogDescription>
+                    <Button>Read More</Button>
+                    <div className="flex justify-between w-full">
+                      <p className="text-gray-500">Thursday, May 30th, 2024</p>
+                      <p className="text-gray-500">Source: News 18</p>
+                    </div>
+                  </DialogHeader>
+                </div>
+              </CarouselItem>
+              {/* Add more CarouselItem components here for additional slides */}
+              <CarouselItem>
+                <div className="flex flex-col items-center gap-6">
+                  <Image
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="news-image"
+                    width={600}
+                    height={400}
+                    className="rounded-md"
+                  />
+                  <DialogHeader className="gap-4 text-center">
+                    <DialogTitle className="text-3xl">
+                      Breakthrough in Quantum Computing: Scientists Achieve
+                      Stable Qubit State at Room Temperature
+                    </DialogTitle>
+                    <DialogDescription className="text-xl">
+                      In a monumental advancement for quantum computing,
+                      researchers at the Quantum Computing Institute have
+                      successfully maintained a stable qubit state at room
+                      temperature. This breakthrough could significantly
+                      accelerate the development and practical application of
+                      quantum computers,
+                    </DialogDescription>
+                    <Button>Read More</Button>
+                    <div className="flex justify-between w-full">
+                      <p className="text-gray-500">Thursday, May 30th, 2024</p>
+                      <p className="text-gray-500">Source: News 18</p>
+                    </div>
+                  </DialogHeader>
+                </div>
+              </CarouselItem>
+              {/* Add more CarouselItem components here for additional slides */}
+            </CarouselContent>
+            <CarouselPrevious className="h-20 w-20  lg:-mx-10" />
+            <CarouselNext className="h-20 w-20  lg:-mx-10" />
+          </DialogContent>
+        </Carousel>
       </Dialog>
     </div>
   );
