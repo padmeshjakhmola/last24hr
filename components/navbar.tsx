@@ -32,25 +32,25 @@ export function Navbar() {
           <div className="grid gap-2 py-6">
             <Link
               className="flex w-full items-center py-2 text-lg font-semibold"
-              href="#"
+              href="/"
             >
               Home
             </Link>
             <Link
               className="flex w-full items-center py-2 text-lg font-semibold"
-              href="#"
+              href="/about"
             >
               About
             </Link>
             <Link
               className="flex w-full items-center py-2 text-lg font-semibold"
-              href="#"
+              href="/services"
             >
               Services
             </Link>
             <Link
               className="flex w-full items-center py-2 text-lg font-semibold"
-              href="#"
+              href="/contact"
             >
               Contact
             </Link>

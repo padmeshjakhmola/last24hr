@@ -7,7 +7,7 @@ import RightArrow from "../assets/right-arrow.svg";
 
 export default function HomeScreen() {
   return (
-    <div className="flex flex-col gap-6 items-center justify-center h-screen sm: px-4">
+    <div className="flex flex-col gap-6 items-center sm: px-4">
       <Image src={stamp} alt="stamp" width={150} height={150} />
       <h2
         className={`${cormorantGaramond.className} text-6xl sm:text-7xl md:text-8xl text-center`}
