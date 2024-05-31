@@ -39,7 +39,7 @@ export default function HomeScreen() {
           </Button>
         </DialogTrigger>
         <Carousel>
-          <DialogContent className="p-8 md:max-w-2xl gap-6">
+          <DialogContent className="p-8 max-w-md md:max-w-2xl gap-6">
             <CarouselContent>
               <CarouselItem>
                 <div className="flex flex-col items-center gap-6">
@@ -135,8 +135,8 @@ export default function HomeScreen() {
               </CarouselItem>
               {/* Add more CarouselItem components here for additional slides */}
             </CarouselContent>
-            <CarouselPrevious className="h-20 w-20  lg:-mx-10" />
-            <CarouselNext className="h-20 w-20  lg:-mx-10" />
+            <CarouselPrevious className="md:h-20 md:w-20 h-10 w-10  lg:-mx-10" />
+            <CarouselNext className="md:h-20 md:w-20 h-10 w-10  lg:-mx-10" />
           </DialogContent>
         </Carousel>
       </Dialog>
