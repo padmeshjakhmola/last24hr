@@ -35,7 +35,7 @@ export default function HomeScreen() {
       <Dialog>
         <DialogTrigger asChild>
           <Button className="h-12 px-5 my-2 text-base">
-            Start Exploring&nbsp;&nbsp;&nbsp;&nbsp;&#10140;
+            Start Reading&nbsp;&nbsp;&nbsp;&nbsp;&#10140;
           </Button>
         </DialogTrigger>
         <Carousel>

@@ -9,6 +9,11 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../assets/logo.svg";
 import { cormorantGaramond } from "@/app/fonts";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 export function Navbar() {
   return (
@@ -38,22 +43,17 @@ export function Navbar() {
             </Link>
             <Link
               className="flex w-full items-center py-2 text-lg font-semibold"
-              href="/about"
-            >
-              About
-            </Link>
-            <Link
-              className="flex w-full items-center py-2 text-lg font-semibold"
-              href="/services"
-            >
-              Services
-            </Link>
-            <Link
-              className="flex w-full items-center py-2 text-lg font-semibold"
               href="/contact"
             >
               Contact
             </Link>
+            <Link
+              className="flex w-full items-center py-2 text-lg font-semibold"
+              href="/about"
+            >
+              About
+            </Link>
+
             <Link className="items-center py-2 text-lg font-semibold" href="#">
               <Button className="flex w-full">Sign In</Button>
             </Link>
@@ -73,27 +73,29 @@ export function Navbar() {
         </Link>
         <Link
           className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-md font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-          href="/about"
-        >
-          About
-        </Link>
-        <Link
-          className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-md font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-          href="/services"
-        >
-          Services
-        </Link>
-        <Link
-          className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-md font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
           href="/contact"
         >
           Contact
         </Link>
         <Link
+          className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-md font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+          href="/about"
+        >
+          About
+        </Link>
+
+        <Link
           className="flex w-full items-center py-2 text-lg font-semibold"
           href="#"
         >
-          <Button>Sign In</Button>
+          <HoverCard>
+            <HoverCardTrigger asChild>
+              <Button>Sign In</Button>
+            </HoverCardTrigger>
+            <HoverCardContent>
+              <p>This feature is Comming Soon!!</p>
+            </HoverCardContent>
+          </HoverCard>
         </Link>
       </nav>
     </header>
