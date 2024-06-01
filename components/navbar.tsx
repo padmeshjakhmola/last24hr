@@ -14,6 +14,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import { FC } from "react";
 
 export function Navbar() {
   return (
@@ -102,7 +103,7 @@ export function Navbar() {
   );
 }
 
-function MenuIcon(props) {
+const MenuIcon: FC<React.SVGProps<SVGSVGElement>> = (props) => {
   return (
     <svg
       {...props}
@@ -121,9 +122,9 @@ function MenuIcon(props) {
       <line x1="4" x2="20" y1="18" y2="18" />
     </svg>
   );
-}
+};
 
-function MountainIcon(props) {
+const MountainIcon: FC<React.ImgHTMLAttributes<HTMLImageElement>> = (props) => {
   return (
     <div className="flex items-center">
       <Image src={logo} alt="company logo" width={60} height={60} />
@@ -132,4 +133,4 @@ function MountainIcon(props) {
       </h2>
     </div>
   );
-}
+};

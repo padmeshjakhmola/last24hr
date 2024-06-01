@@ -18,8 +18,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useQuery } from "@apollo/client";
+import { topheadlines } from "@/graphql/query/topheadlines";
+import { useEffect } from "react";
+import Loading from "./Loading";
 
 export default function HomeScreen() {
+  const { data, loading } = useQuery(topheadlines);
+  console.log("DATAAA:", data);
+
   return (
     <div className="flex flex-col gap-6 items-center sm:px-4">
       <Image src={stamp} alt="stamp" width={150} height={150} />
@@ -34,9 +41,15 @@ export default function HomeScreen() {
 
       <Dialog>
         <DialogTrigger asChild>
-          <Button className="h-12 px-5 my-2 text-base">
-            Start Reading&nbsp;&nbsp;&nbsp;&nbsp;&#10140;
-          </Button>
+          {loading ? (
+            <Button className="h-12 px-5 my-2 text-base" disabled>
+              Loading News
+            </Button>
+          ) : (
+            <Button className="h-12 px-5 my-2 text-base">
+              Start Reading&nbsp;&nbsp;&nbsp;&nbsp;&#10140;
+            </Button>
+          )}
         </DialogTrigger>
         <Carousel>
           <DialogContent className="p-8 max-w-md md:max-w-2xl gap-6">
