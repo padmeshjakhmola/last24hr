@@ -22,7 +22,6 @@ import { useQuery } from "@apollo/client";
 import { topheadlines } from "@/graphql/query/topheadlines";
 import defaultImage from "../assets/newspaper.jpg";
 import Link from "next/link";
-import { News } from "@/types";
 
 export default function HomeScreen() {
   const { data, loading } = useQuery<{ getNews: News[] }>(topheadlines);
