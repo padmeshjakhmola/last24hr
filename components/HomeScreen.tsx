@@ -22,9 +22,10 @@ import { useQuery } from "@apollo/client";
 import { topheadlines } from "@/graphql/query/topheadlines";
 import defaultImage from "../assets/newspaper.jpg";
 import Link from "next/link";
+import { News } from "@/types";
 
 export default function HomeScreen() {
-  const { data, loading } = useQuery(topheadlines);
+  const { data, loading } = useQuery<{ getNews: News[] }>(topheadlines);
 
   const formatDate = (dateString: string) => {
     const date = parseISO(dateString);
@@ -80,8 +81,10 @@ export default function HomeScreen() {
                           <>
                             To read the full article.{" "}
                             <Link
-                              href="#"
+                              href={item?.url}
                               className="underline hover:text-blue-400"
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
                               Click Here
                             </Link>
@@ -89,7 +92,12 @@ export default function HomeScreen() {
                         )}
                       </DialogDescription>
                     </DialogHeader>
-                    <Link href={item?.url} className="w-full">
+                    <Link
+                      href={item?.url}
+                      className="w-full"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Button className="w-full">Read More</Button>
                     </Link>
                     <div className="flex justify-between w-full">
