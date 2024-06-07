@@ -15,6 +15,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { FC } from "react";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 export function Navbar() {
   return (
@@ -84,20 +85,14 @@ export function Navbar() {
         >
           About
         </Link>
-
-        <Link
-          className="flex w-full items-center py-2 text-lg font-semibold"
-          href="#"
-        >
-          <HoverCard>
-            <HoverCardTrigger asChild>
-              <Button>Sign In</Button>
-            </HoverCardTrigger>
-            <HoverCardContent>
-              <p>This feature is Comming Soon!!</p>
-            </HoverCardContent>
-          </HoverCard>
-        </Link>
+        <SignedOut>
+          <SignInButton>
+            <Button>Sign In</Button>
+          </SignInButton>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </nav>
     </header>
   );

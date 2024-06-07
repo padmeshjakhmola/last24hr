@@ -24,7 +24,7 @@ import defaultImage from "../assets/newspaper.jpg";
 import Link from "next/link";
 
 export default function HomeScreen() {
-  const { data, loading } = useQuery<{ getNews: News[] }>(topheadlines);
+  const { data, loading, error } = useQuery<{ getNews: News[] }>(topheadlines);
 
   const formatDate = (dateString: string) => {
     const date = parseISO(dateString);
@@ -48,6 +48,10 @@ export default function HomeScreen() {
           {loading ? (
             <Button className="h-12 px-5 my-2 text-base" disabled>
               Loading News
+            </Button>
+          ) : error ? (
+            <Button className="h-12 px-5 my-2 text-base bg-red-700" disabled>
+              Error loading News
             </Button>
           ) : (
             <Button className="h-12 px-5 my-2 text-base">

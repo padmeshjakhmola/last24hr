@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { wixMadeforDisplay } from "./fonts";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 
 export const metadata: Metadata = {
   title: "last24hr",
@@ -13,8 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={wixMadeforDisplay.className}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={wixMadeforDisplay.className}>{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }
