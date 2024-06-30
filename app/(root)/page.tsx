@@ -1,13 +1,9 @@
-"use client"
+"use client";
 import HomeScreen from "@/components/HomeScreen";
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-} from "@apollo/client";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: "http://localhost:8000/graphql",
+  uri: `${process.env.NEXT_PUBLIC_BACKEND_URL}/graphql`,
   cache: new InMemoryCache(),
 });
 
